@@ -10,7 +10,7 @@ class TPQueue {
   int head, tail;
 
  public:
-  TPQueue() : head(0), tail(0) {}
+  TPQueue(): head(0), tail(0) {}
   int Dimension() {
     return tail - head;
   }
@@ -23,14 +23,17 @@ class TPQueue {
         arr[(k + 1) % size] = arr[k % size];
         k--;
       }
+      arr[(k + 1) % size] = value;
+      tail++;
     }
-    T pop() {
-      if (head == tail) {
-        throw std::string("Empty!");
-      } else {
-        return arr[(head++) % size];
-      }
+  }
+  T pop() {
+    if (head == tail) {
+      throw std::string("Empty!");
+    } else {
+      return arr[(head++) % size];
     }
+  }
 };
 
 struct SYM {
