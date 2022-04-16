@@ -4,7 +4,7 @@
 #include <string>
 
 template<typename T, int size>
-class TPQueue { 
+class TPQueue {
  private:
   T arr[10];
   int head, tail;
