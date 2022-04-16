@@ -4,7 +4,7 @@
 #include <string>
 
 template<typename T, int size>
-class TPQueue {
+class TPQueue { 
  private:
   T arr[10];
   int head, tail;
@@ -15,7 +15,7 @@ class TPQueue {
     return tail - head;
   }
   void push(T value) {
-    if (Dimension >= size) {
+    if (Dimension() >= size) {
       throw std::string("Full!");
     } else {
       int k = tail - 1;
